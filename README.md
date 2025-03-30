@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# mortgage-credit-rating
-=======
 # **Mortgage Credit Rating System**
 
 This project evaluates mortgage applications and assigns a **credit rating** based on financial risk factors such as **Loan-to-Value (LTV), Debt-to-Income (DTI), credit score, loan type, and property type**.
@@ -36,6 +33,5 @@ This Python script reads a list of mortgage applications, validates their fields
 ## **Installation**
 1. Clone this repository:
    ```sh
-   git clone https://github.com/your-repo/mortgage-credit-rating.git
+   git clone https://github.com/vijaysingh188/mortgage-credit-rating.git
    cd mortgage-credit-rating
->>>>>>> 3f41c63 (added files)
