@@ -34,7 +34,7 @@ def validate_mortgage(mortgage):
         mortgage (dict): A dictionary containing mortgage details.
 
     Raises:
-        ValueError: If any required field is missing or has an invalid value.
+        ValueError:  If any required field is missing or has an invalid value.
     """
     required_fields = {
         "credit_score": (int, 300, 850),

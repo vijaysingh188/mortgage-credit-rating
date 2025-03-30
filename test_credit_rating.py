@@ -68,5 +68,6 @@ class TestCreditRating(unittest.TestCase):
         ]
         self.assertEqual(calculate_credit_rating(mortgages), "AAA")
 
+
 if __name__ == "__main__":
     unittest.main()

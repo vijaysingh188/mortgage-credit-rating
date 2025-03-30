@@ -18,6 +18,7 @@ This project evaluates mortgage applications and assigns a **credit rating** bas
 
 ---
 
+
 ## **Overview**
 This Python script reads a list of mortgage applications, validates their fields, calculates risk scores based on financial factors, and assigns a **credit rating** of **AAA, BBB, or C**.
 
