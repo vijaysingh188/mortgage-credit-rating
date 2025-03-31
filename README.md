@@ -35,3 +35,11 @@ This Python script reads a list of mortgage applications, validates their fields
    ```sh
    git clone https://github.com/vijaysingh188/mortgage-credit-rating.git
    cd mortgage-credit-rating
+
+
+## **Run Scripy**
+1. python credit_ratings.py
+
+## **Run Test Scripy**
+1. python test_credit_rating.py
+
