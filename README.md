@@ -41,5 +41,6 @@ This Python script reads a list of mortgage applications, validates their fields
 1. python credit_ratings.py
 
 ## **Run Test Scripy**
-1. python test_credit_rating.py
+1. python -m unittest test_credit_rating.py
+
 
