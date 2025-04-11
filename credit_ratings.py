@@ -2,7 +2,7 @@ import json
 
 def validate_field(field, value, expected_type, min_val=None, max_val=None, allowed_values=None):
     """
-    Validates a single mortgage field based on expected type, range, and allowed values.
+    Validates a single mortgage field based on expected type, range, and allowed values----.
     
     Args:
         field (str): Name of the field being validated.
