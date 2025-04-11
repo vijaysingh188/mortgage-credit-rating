@@ -1,0 +1,95 @@
+CREATE DATABASE EMPLOYEE
+
+USE EMPLOYEE
+
+CREATE TABLE EMPLOYEE_CPY SELECT * FORM  EMPLOYEE
+
+CREATE INDEX idx_lastname ON employees (last_name);
+
+CREATE UNIQUE INDEX idx_unique_email ON users (email);
+
+CREATE FULLTEXT INDEX idx_search ON articles (title, content);
+
+
+create TABLE users (
+    id  INT PRIMARY KEY AUTOINCREMENT, 
+    username VARCHAR(120) NOTNULL UINQUE,
+    email VARCHAR(120) NOTNULL UNIQUE,
+    passwords VARCHAR(20) NOTNULL
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+);
+
+INSERT INTO  users (username, email, passwords) 
+values 
+('vj','vj@gmail.com','ckgkc'),
+('hh','hh@gmail.com','ckgkc');
+
+
+SELECT * FROM  USERS WHERE USERNAME = "vj";
+
+UPDATE users SET email = "abc@gmail,com" WHERE username='vj';
+
+
+DELETE FROM users WHERE  username = "vj";
+
+SELECT * FROM users ORDER BY created_at DESC
+  
+
+SELECT NAME,EMP_ID 
+FORM EMPLOYEE 
+ORDER BY SALARY DESC 
+LIMIT 1 OFFSET 2
+
+
+-- How can you find duplicate records in a table?
+SELECT USERNAME,COUNT(*)
+FROM EMPLOYEE
+GROUP BY USERNAME
+HAVING  COUNT(*) > 1;
+
+
+-- What is the purpose of the GROUP BY clause?
+Answer: The GROUP BY clause is used to arrange identical data into groups. 
+It is often used with aggregate functions (COUNT, SUM, AVG, etc.) 
+to perform calculations on each group of data.
+
+
+-- Explain the difference between WHERE and HAVING clauses.
+WHERE: Used to filter records before any groupings are made. It cannot be used with aggregate functions.
+SELECT * FROM products WHERE price > 100;
+
+HAVING: Used to filter records after groupings are made, allowing the use of aggregate functions.
+SELECT category_id, COUNT(*) 
+FROM products 
+GROUP BY category_id 
+HAVING COUNT(*) > 5;
+
+
+
+SELECT COULMN_VALUE1,COULMN_VALUE2
+FROM TABLE1
+INNER JOIN TABLE2 
+WHERE TABLE1.COULMN = TABLE2.COULMN
+
+
+
+
+CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO INCREMENT,
+    user_id INT ,
+    FOREIGN KEY (user_id)  REFERENCES users(id),
+
+)
+
+*-
+
+
+# session = Client.start_session()
+ # session.start_transaction()
+# try:
+#     collection.insert_one({"name":'vj'},session=session)
+#     session.commit_transaction()
+# except:
+#     session.abort_transaction()
+ 
